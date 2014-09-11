@@ -5,9 +5,12 @@
 /// <reference path='State/Menu.ts'/>
 /// <reference path='State/Main.ts'/>
 
-module Velcrelephant {
-  export class Game extends Phaser.Game {
-    constructor() {
+module Velcrelephant
+{
+  export class Game extends Phaser.Game
+  {
+    constructor()
+    {
       super(640, 480, Phaser.AUTO, 'game-div');
 
       this.state.add('boot', State.Boot);
@@ -20,6 +23,7 @@ module Velcrelephant {
   }
 }
 
-window.onload = () => {
+window.onload = () =>
+{
   var game = new Velcrelephant.Game();
 }
