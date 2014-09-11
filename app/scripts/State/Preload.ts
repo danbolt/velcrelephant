@@ -9,7 +9,7 @@ module Velcrelephant.State
       this.preloadBar = this.add.sprite(0, 148, 'preload-bar');
       this.load.setPreloadSprite(this.preloadBar);
 
-      this.load.image('menu-background', 'assets/images/menu-background.png');
+      this.load.image('tos', 'assets/images/tos.jpg');
 
       // Load remaining assets here
     }

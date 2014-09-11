@@ -6,7 +6,8 @@ module Velcrelephant.State
 
     create()
     {
-      this.background = this.add.sprite(80, 0, 'menu-background');
+      this.stage.backgroundColor = 0x000000;
+      this.background = this.add.sprite(0, 0, 'tos');
       this.input.onDown.addOnce(() =>
       {
         this.game.state.start('main');
