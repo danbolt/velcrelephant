@@ -16,7 +16,7 @@ Velcrelephant can be played by yourself, or cooperatively with another person. T
 ## Gameplay
 This section will cover gameplay for Velcrelephant.
 ### Overview
-Velcrelephant is a tile-based platforming game. Tiles in this game will be explicit, and convey a consistent, blocky, form. Some examples of this style include [Alex Kidd in Miracle World](http://youtu.be/Rb9haoWT5js?t=19m34s), [Mr. Gimmick](http://youtu.be/zYcf2yUgblc?t=1m28s), and [Kirby's Adventure](http://youtu.be/rJXM4EPbPe0?t=3m19s). Games from the early [Kirby franchise](http://en.wikipedia.org/wiki/Kirby_(series)) will serve as a chief guide for atmospheric style.
+Velcrelephant is a tile-based platforming game. Tiles in this game will be explicit, and convey a consistent, blocky, form. Some examples of this style include [Alex Kidd in Miracle World](http://youtu.be/Rb9haoWT5js?t=19m34s), [Mr. Gimmick](http://youtu.be/zYcf2yUgblc?t=1m28s), and [Kirby's Adventure](http://youtu.be/rJXM4EPbPe0?t=3m19s). Games from the early [Kirby franchise](http://en.wikipedia.org/wiki/Kirby_(series) will serve as a chief guide for atmospheric style.
 
 The objective while playing Velcrelephant will be to get to the end of the level. The player will directly control Velcrelephant with they keyboard or gamepad. They will have to run, jump over obstacles, and stick to objects using their velcro-based powers. The player will also have to avoid or defeat baddies that appear onscreen.
 
@@ -33,13 +33,41 @@ If the player presses the first input button, Velcrelephant will jump when on th
 
 Pressing and holding the jump button for longer/shorter periods of time should not affect jumping time. Or, jumping should be seen as a one-off action.
 #### Velcro Powers
-sdasdsa
+Pressing the second input button will activate/deactivate Velcrelephant's Velcro Powers. This could either be a toggle or "hold" technique (or both, determined by a player setting). This can only be done when Velcrelephant is resting on the ground. If Velcrelephant is walking when they activates their Velcro Powers, Velcrelephant will stop walking, and the player will need to release and press left/right once again to continue walking.
+
+`diagram?`
+
+Upon activating Velco powers, things will stick to Velcrelephant! The only things that will stick to Velcrelephant are specific **living objects**, which will be defined later. Sticking means any living objects that are touching Velcrelephant's hitbox will be attached, and act as though they are part of the same body.
+
+`diagram`
+
+If Velcrelephant is touching the ground, jumping, or falling, pressing left and right will move the attached objects along with Velcrelephant. Velcrelephant can jump off the ground while attached. If Velcrelephant is suspended, or attached to an object below, then moving left, right, or jumping will not do anything. This may require addressing specific edge cases when implementing.
+
+Velcrelephant can still receive damage when attached to objects. If Velcrelephant is attacked or damaged while stuck to something, the Velcro Powers will deactivate.
+
 #### Receivng Damage
-TODO
+`TODO`
 
 ### Environments
+#### Scrolling
+Environments will be levels commonly seen in platform video games, using the mentioned blocky tile style. As Velcrelephant moves across the level, the game's camera will scroll, keeping Velcrelephant in the inner 50% (subject to change) of the screen. The screen will only scroll in one direction at a time, as seen in games like [Mega Man 2](YOUTUBE) and Alex Kidd in Miracle World.
+
+`object type diagram`
+
+#### Object Types
+Things in the environments can be dividied into three varieties, Background Objects, Static Objects, and Living Objects. Each will have a specific role, purpose, and visual style.
+##### Background Objects
+Background Objects make up things that the player cannot interact with, or don't interfere with the game logic. These are typically aesthetic things that contribute to the taste and texture of the world. Velcrelephant cannot interact with these things, and they shouldn't attempt to take the player's attention. Living Objects can pass over these as though they are not there.
+##### Still Objects
+Still Objects can be thought of as "static tiles" or the game's foreground. This will generally be tiles that make up the floor, walls, and platforms. They do not move, and have non-distracting animations, if any at all. Living Objects should not be occupy the same space as background objects.
+##### Living Objects
+Living Objects can be seen as the "game entities" of the world. They move, animate, and can be seen like actors on a stage. Living Objects may or may not overlap with one another. Examples include Velcrelepaht, Hooky Hippo, moving platforms, baddies, blocks, dropped items, etc.
+
 ### Baddies
+`TODO`
+
 ### Playing Cooperatively
+A second player can play as Hooky Hippo. KEEP WRITING
 
 ## Content Scope
 
