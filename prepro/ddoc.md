@@ -102,7 +102,7 @@ Still Objects should use darker, more subdued colours, consistent patterns/textu
 #### Background Objects
 Background Objects are entirely cosmetic, and will likely stimulate the player through their peripheral vision. Background objects should stick to more faded pastels, and never try to grab the player's attention. If the player pays attention to a background object, its because they have voluntarily done so, or rather, they have *stopped to appreciate the view and smell the flowers*.
 ### Cutscenes
-```TODO```
+`TODO`
 Lots of cool things we can do here! Maybe a slide show and some text? Those are always nice.
 ### Depictions of Violence
 The game will depict violent behaviour between Velcrelephant and baddies, but it will be suitable for general audiences, and not particularly realistic. The following should be pretty clear cut.
