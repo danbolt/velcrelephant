@@ -16,7 +16,7 @@ Velcrelephant can be played by yourself, or cooperatively with another person. T
 ## Gameplay
 This section will cover gameplay for Velcrelephant.
 ### Overview
-Velcrelephant is a tile-based platforming game. Tiles in this game will be explicit, and convey a consistent, blocky, form. Some examples of this style include [Alex Kidd in Miracle World](http://youtu.be/Rb9haoWT5js?t=19m34s), [Mr. Gimmick](http://youtu.be/zYcf2yUgblc?t=1m28s), and [Kirby's Adventure](http://youtu.be/rJXM4EPbPe0?t=3m19s). Games from the early [Kirby franchise](http://en.wikipedia.org/wiki/Kirby_(series) will serve as a chief guide for atmospheric style.
+Velcrelephant is a tile-based platforming game. Tiles in this game will be explicit, and convey a consistent, blocky, form. Some examples of this style include [Alex Kidd in Miracle World](http://youtu.be/Rb9haoWT5js?t=19m34s), [Mr. Gimmick](http://youtu.be/zYcf2yUgblc?t=1m28s), and [Kirby's Adventure](http://youtu.be/rJXM4EPbPe0?t=3m19s). Games from the early [Kirby franchise](http://en.wikipedia.org/wiki/Kirby_(series)) will serve as a chief guide for atmospheric style.
 
 The objective while playing Velcrelephant will be to get to the end of the level. The player will directly control Velcrelephant with they keyboard or gamepad. They will have to run, jump over obstacles, and stick to objects using their velcro-based powers. The player will also have to avoid or defeat baddies that appear onscreen.
 
@@ -50,7 +50,7 @@ Velcrelephant can still receive damage when attached to objects. If Velcrelephan
 
 ### Environments
 #### Scrolling
-Environments will be levels commonly seen in platform video games, using the mentioned blocky tile style. As Velcrelephant moves across the level, the game's camera will scroll, keeping Velcrelephant in the inner 50% (subject to change) of the screen. The screen will only scroll in one direction at a time, as seen in games like [Mega Man 2](YOUTUBE) and Alex Kidd in Miracle World.
+Environments will be levels commonly seen in platform video games, using the mentioned blocky tile style. As Velcrelephant moves across the level, the game's camera will scroll, keeping Velcrelephant in the inner 50% (subject to change) of the screen. The screen will only scroll in one direction at a time, as seen in games like [Mega Man 2](http://youtu.be/KvkHhpz2FrY?t=14m44s) and Alex Kidd in Miracle World.
 
 `object type diagram`
 
@@ -76,7 +76,7 @@ Living Objects can be seen as the "game entities" of the world. They move, anima
 ### Playing Cooperatively
 A second player can play as Hooky Hippo, who can accompany Velcrelephant along on the adventure. Hooky Hippo has an identical moveset to Velcrelephant, but is represented by a different set of sprites.
 
-Camera movement and two-player game logic will follow *Sakurai rules*, implying that it will only follow Velcrelephant, and never Hooky Hippo. If Hooky Hippo is left behind off the screen by Velcrelephant's movement, Hooky Hippo will be brought to Velcrelephant's location near-instantaneously, with an animation that indicating that Hooky Hippo has moved. Examples of this can be seen in [Kirby's Super Star](YOUTUBE) and [Super Smash Bros. Brawl](YOUTUBE).
+Camera movement and two-player game logic will follow *Sakurai rules*, implying that it will only follow Velcrelephant, and never Hooky Hippo. If Hooky Hippo is left behind off the screen by Velcrelephant's movement, Hooky Hippo will be brought to Velcrelephant's location near-instantaneously, with an animation that indicating that Hooky Hippo has moved. Examples of this can be seen in [Kirby's Super Star](http://youtu.be/GMjG70AHm00) and [Super Smash Bros. Brawl](http://youtu.be/T6Q1GMsXsS4?t=40m5s).
 
 If one player perishes, then the other can keep playing until the end of the level (or reaches some sort of checkpoint). After, both players can resume playing again.
 
@@ -85,11 +85,11 @@ WebRTC syncronization of game entities is a stretch goal, and serializing game d
 ## Content Scope
 The game's content will consist of a specific number of levels, and these levels should be organized in order to encourage a specific duration of play time. The following section will suggest a few specific sets:
 ### Level Scope
-- **Mushroom Kingdom**: Organize the levels into *worlds*, each containing a set of levels that follow a common theme. These sorts of worlds are typically numbered, such as the first level of the first world would be 1-1, or the second level of the fourth world being 4-2. This is a good way of showing the player's progress, and allows the world to be seen as like a score counter. The levels can follow a difficulty curve, introducing and elaborating on gameplay elements from the first to last level of a world. Levels are generally quite short, can be completed in a minute or two, and a small play session would be finishing all the levels in the world. The last world would typically have some sort of boss character to fight. A cornerstone example of this would be [Super Mario Bros](YOUTUBE).
+- **Mushroom Kingdom**: Organize the levels into *worlds*, each containing a set of levels that follow a common theme. These sorts of worlds are typically numbered, such as the first level of the first world would be 1-1, or the second level of the fourth world being 4-2. This is a good way of showing the player's progress, and allows the world to be seen as like a score counter. The levels can follow a difficulty curve, introducing and elaborating on gameplay elements from the first to last level of a world. Levels are generally quite short, can be completed in a minute or two, and a small play session would be finishing all the levels in the world. The last world would typically have some sort of boss character to fight. A cornerstone example of this would be [Super Mario Bros](http://youtu.be/7qirrV8w5SQ).
 - **Dream Land**
 Each level has a specific theme or style to it, and are generally a bit longer. Levels can be organized into certain *areas*, allowing the designer to give a sense of pacing and flow. A small play session would typically be one level, lasting around ten minutes or so. Each level would have a boss at the end of it. An example of this would typically be games in the Kirby series.
 - **Dinosaur Island**
-Each level is part of a network, where players can navigate between on an overworld map. Upon completing one level, players would be able to play new ones, and slowly explore the game world. Levels would typically be around three or four minutes, and secret exits can show connections to new levels. Levels with boss characters would appear usually after a specific set of levels. [Super Mario World](YOUTUBE) is a good example of this.
+Each level is part of a network, where players can navigate between on an overworld map. Upon completing one level, players would be able to play new ones, and slowly explore the game world. Levels would typically be around three or four minutes, and secret exits can show connections to new levels. Levels with boss characters would appear usually after a specific set of levels. [Super Mario World](http://youtu.be/xzArNQRCxO0?t=5m34s) is a good example of this.
 
 ## Visual Style
 The game will have a bright, comfortable, cartoony style. Players or viewers should find it very easy to differentiate living, still, and background objects from one another.
@@ -107,7 +107,7 @@ Lots of cool things we can do here! Maybe a slide show and some text? Those are 
 ### Depictions of Violence
 The game will depict violent behaviour between Velcrelephant and baddies, but it will be suitable for general audiences, and not particularly realistic. The following should be pretty clear cut.
 
-Upon a baddie being "killed" or "defeated", it will have a "death" animation similar to a puff of smoke or KO. Examples of this can be seen in [Legend of Zelda: Link's Awakening](YOUTUBE), [LOST YETI](YOUTUBE), or [Donkey Kong Country](YOUTUBE).
+Upon a baddie being "killed" or "defeated", it will have a "death" animation similar to a puff of smoke or KO. Examples of this can be seen in [Legend of Zelda: Link's Awakening](http://youtu.be/YzEU19PUVuE?t=1h28m20s), [LOST YETI](http://youtu.be/D3p2e5ivEzw?t=3m25s), or [Donkey Kong Country](http://youtu.be/hakuztODkAw?t=1m51s).
 
 The game will not show any depictions of blood or gore.
 
