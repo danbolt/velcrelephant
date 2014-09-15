@@ -92,9 +92,32 @@ Each level has a specific theme or style to it, and are generally a bit longer. 
 Each level is part of a network, where players can navigate between on an overworld map. Upon completing one level, players would be able to play new ones, and slowly explore the game world. Levels would typically be around three or four minutes, and secret exits can show connections to new levels. Levels with boss characters would appear usually after a specific set of levels. [Super Mario World](YOUTUBE) is a good example of this.
 
 ## Visual Style
-The game will have a bright, comfortable, cartoony style.
+The game will have a bright, comfortable, cartoony style. Players or viewers should find it very easy to differentiate living, still, and background objects from one another.
 ### Colour and Texture
+```diagram showing colours/textures```
+#### Living Objects
+Living objects should use bright colours, light patterns/textures, and distinct outlines. Animations and interactions with Still and other Living Objects should also activate particle effects, where suitable. Living Objects should attempt to grab the most attention from the player, and be considered to have the most positive space.
+#### Still Objects
+Still Objects should use darker, more subdued colours, consistent patterns/textures, and subtle outlines. They should be visible and apparent to the player, but only give enough attention to help the player know what they are. Detail is good in Still Objects, but they should not distract from the Living Objects interacting.
+#### Background Objects
+Background Objects are entirely cosmetic, and will likely stimulate the player through their peripheral vision. Background objects should stick to more faded pastels, and never try to grab the player's attention. If the player pays attention to a background object, its because they have voluntarily done so, or rather, they have *stopped to appreciate the view and smell the flowers*.
+### Cutscenes
+```TODO```
+Lots of cool things we can do here! Maybe a slide show and some text? Those are always nice.
 ### Depictions of Violence
+The game will depict violent behaviour between Velcrelephant and baddies, but it will be suitable for general audiences, and not particularly realistic. The following should be pretty clear cut.
+
+Upon a baddie being "killed" or "defeated", it will have a "death" animation similar to a puff of smoke or KO. Examples of this can be seen in [Legend of Zelda: Link's Awakening](YOUTUBE), [LOST YETI](YOUTUBE), or [Donkey Kong Country](YOUTUBE).
+
+The game will not show any depictions of blood or gore.
+
+Cutscenes will not show depictions of violence.
+
+Characters resembling humans will not be seen in depcitions of violence.
+
+Protagonists that the player can control, such as Velcrelephant or Hooky Hippo, should avoid depicting violence in a cruel manner.
+
+If Velcrelephant were to be rated by the ESRB, it should obtain a rating of *E for Everyone*.
 
 ## Audio
 `TODO: sound effects, bgm, etc.`
@@ -108,7 +131,7 @@ Text used in user interfaces should use few words, and try to rely on simple ver
 
 `figure: locatization tables`
 
-All dialogue, interface, and other gameplay-related text should be stored in a dictionary that's labelled indexed by descriptive names. For example, if the programmer wanted to draw 'TOASTER' on a menu option, it should be stored with a key `menu_toaster` that should map to the string. If necessary, this dictionary can be relocalized without having to change game code. For example, 'menu_toaster' could map to 'トアスタ' in Japanese. 
+All dialogue, interface, and other gameplay-related text should be stored in a dictionary that's labelled indexed by descriptive names. For example, if the programmer wanted to draw 'TOASTER' on a menu option, it should be stored with a key `menu_toaster` that should map to the string. If necessary, this dictionary can be relocalized without having to change game code. For example, 'menu_toaster' could map to 'トアスタ' in Japanese.
 
 ## Implementation
 ### Phaser Library
