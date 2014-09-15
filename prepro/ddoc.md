@@ -37,7 +37,7 @@ Pressing the second input button will activate/deactivate Velcrelephant's Velcro
 
 `diagram?`
 
-Upon activating Velco powers, things will stick to Velcrelephant! The only things that will stick to Velcrelephant are specific **living objects**, which will be defined later. Sticking means any living objects that are touching Velcrelephant's hitbox will be attached, and act as though they are part of the same body.
+Upon activating Velco powers, things will stick to Velcrelephant! The only things that will stick to Velcrelephant are specific **living objects**, which will be defined later. Sticking means any living objects that are touching Velcrelephant's hitbox will be attached, and act as though they are part of the same body. Velcrelephant cannot stick to living objects that are enemies or things like powerups, coins, items, etc.
 
 `diagram`
 
@@ -64,25 +64,59 @@ Still Objects can be thought of as "static tiles" or the game's foreground. This
 Living Objects can be seen as the "game entities" of the world. They move, animate, and can be seen like actors on a stage. Living Objects may or may not overlap with one another. Examples include Velcrelepaht, Hooky Hippo, moving platforms, baddies, blocks, dropped items, etc.
 
 ### Baddies
+#### Enemies
+`TODO`
+#### Environmental Baddies
+`TODO`
+#### Ambiguous Characters
+`TODO`
+#### Bosses
 `TODO`
 
 ### Playing Cooperatively
-A second player can play as Hooky Hippo. KEEP WRITING
+A second player can play as Hooky Hippo, who can accompany Velcrelephant along on the adventure. Hooky Hippo has an identical moveset to Velcrelephant, but is represented by a different set of sprites.
+
+Camera movement and two-player game logic will follow *Sakurai rules*, implying that it will only follow Velcrelephant, and never Hooky Hippo. If Hooky Hippo is left behind off the screen by Velcrelephant's movement, Hooky Hippo will be brought to Velcrelephant's location near-instantaneously, with an animation that indicating that Hooky Hippo has moved. Examples of this can be seen in [Kirby's Super Star](YOUTUBE) and [Super Smash Bros. Brawl](YOUTUBE).
+
+If one player perishes, then the other can keep playing until the end of the level (or reaches some sort of checkpoint). After, both players can resume playing again.
+
+WebRTC syncronization of game entities is a stretch goal, and serializing game data should be considered in the implementation to support this.
 
 ## Content Scope
+The game's content will consist of a specific number of levels, and these levels should be organized in order to encourage a specific duration of play time. The following section will suggest a few specific sets:
+### Level Scope
+- **Mushroom Kingdom**: Organize the levels into *worlds*, each containing a set of levels that follow a common theme. These sorts of worlds are typically numbered, such as the first level of the first world would be 1-1, or the second level of the fourth world being 4-2. This is a good way of showing the player's progress, and allows the world to be seen as like a score counter. The levels can follow a difficulty curve, introducing and elaborating on gameplay elements from the first to last level of a world. Levels are generally quite short, can be completed in a minute or two, and a small play session would be finishing all the levels in the world. The last world would typically have some sort of boss character to fight. A cornerstone example of this would be [Super Mario Bros](YOUTUBE).
+- **Dream Land**
+Each level has a specific theme or style to it, and are generally a bit longer. Levels can be organized into certain *areas*, allowing the designer to give a sense of pacing and flow. A small play session would typically be one level, lasting around ten minutes or so. Each level would have a boss at the end of it. An example of this would typically be games in the Kirby series.
+- **Dinosaur Island**
+Each level is part of a network, where players can navigate between on an overworld map. Upon completing one level, players would be able to play new ones, and slowly explore the game world. Levels would typically be around three or four minutes, and secret exits can show connections to new levels. Levels with boss characters would appear usually after a specific set of levels. [Super Mario World](YOUTUBE) is a good example of this.
 
 ## Visual Style
+The game will have a bright, comfortable, cartoony style.
 ### Colour and Texture
-
 ### Depictions of Violence
 
 ## Audio
+`TODO: sound effects, bgm, etc.`
 
-## Conveying of Information
+## Text
+The game should employ text where necessary, but rely on it as little as possible. **A player should never need to understand English to play Velcrelephant.**
+
+Cutscenes can show dialogue, but it should be short and use simple English. A young child should be able to enjoy the game.
+
+Text used in user interfaces should use few words, and try to rely on simple verbs to describe things where possible. Particle effects may use onomatopeia (such as a bomb going *boom*), but these words should be as short as possible and easy to read.
+
+`figure: locatization tables`
+
+All dialogue, interface, and other gameplay-related text should be stored in a dictionary that's labelled indexed by descriptive names. For example, if the programmer wanted to draw 'TOASTER' on a menu option, it should be stored with a key `menu_toaster` that should map to the string. If necessary, this dictionary can be relocalized without having to change game code. For example, 'menu_toaster' could map to 'トアスタ' in Japanese. 
 
 ## Implementation
 ### Phaser Library
 ### Navigation (Screen State)
-### AABB Entities
+### Entities
+#### AABB Implementations
 ### Tile Layer
 ### Particle Effects
+### Text Data
+### Cutscenes
+### Audio Formats
