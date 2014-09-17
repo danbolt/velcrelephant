@@ -10,6 +10,7 @@ module Velcrelephant.State
       this.load.setPreloadSprite(this.preloadBar);
 
       this.load.image('tos', 'assets/images/tos.jpg');
+      this.load.image('player', 'assets/images/test-sheet.png');
 
       // Load remaining assets here
     }

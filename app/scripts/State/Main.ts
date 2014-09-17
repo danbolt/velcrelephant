@@ -1,3 +1,5 @@
+/// <reference path="../Prefab/Player.ts" />
+
 module Velcrelephant.State
 {
   export class Main extends Phaser.State
@@ -6,7 +8,7 @@ module Velcrelephant.State
     {
       this.stage.backgroundColor = 0x000000;
 
-      // Create game objects here
+      var player1 = new Prefab.Player(this.game, 10, 10);
     }
   }
 }
