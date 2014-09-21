@@ -4,7 +4,7 @@ module Velcrelephant.Prefab
   {
     constructor(game: Phaser.Game, x: number, y: number)
     {
-      super(game, x, y, 'player', 0);
+      super(game, x, y, 'princeprotect', 0);
 
       game.add.existing(this);
     }
@@ -17,20 +17,28 @@ module Velcrelephant.Prefab
 
         if (keyboard.isDown(Phaser.Keyboard.RIGHT))
         {
-          this.x += 2;
+          this.body.velocity.x = 25;
         }
         else if (keyboard.isDown(Phaser.Keyboard.LEFT))
         {
-          this.x -= 2;
+          this.body.velocity.x = -25;
+        }
+        else
+        {
+          this.body.velocity.x = 0;
         }
 
         if (keyboard.isDown(Phaser.Keyboard.DOWN))
         {
-          this.y += 2;
+          this.body.velocity.y = 25;
         }
         else if (keyboard.isDown(Phaser.Keyboard.UP))
         {
-          this.y -= 2;
+          this.body.velocity.y = -25;
+        }
+        else
+        {
+          this.body.velocity.y = 0;
         }
       }
     }
