@@ -12,7 +12,7 @@ module Velcrelephant
     constructor()
     {
       super(640, 480, Phaser.AUTO, 'game-div');
-
+      
       this.state.add('boot', State.Boot);
       this.state.add('preload', State.Preload);
       this.state.add('menu', State.Menu);
