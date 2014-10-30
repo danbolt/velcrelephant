@@ -7,6 +7,8 @@ module Velcrelephant.Prefab
       super(game, x, y, 'player', 0);
 
       game.add.existing(this);
+      this.anchor.setTo(.5, 1);
+      this.animations.add('walk', [0,1], 10, true);
     }
 
     update()
@@ -17,24 +19,29 @@ module Velcrelephant.Prefab
 
         if (keyboard.isDown(Phaser.Keyboard.RIGHT))
         {
-          this.body.velocity.x = 25;
+          this.body.velocity.x = 50;
+          this.scale.x = 1;
+          this.animations.play('walk');
         }
         else if (keyboard.isDown(Phaser.Keyboard.LEFT))
         {
-          this.body.velocity.x = -25;
+          this.body.velocity.x = -50;
+          this.scale.x = -1;
+          this.animations.play('walk');
         }
         else
         {
           this.body.velocity.x = 0;
+          this.animations.frame = 0;
         }
 
         if (keyboard.isDown(Phaser.Keyboard.DOWN))
         {
-          this.body.velocity.y = 25;
+          this.body.velocity.y = 100;
         }
         else if (keyboard.isDown(Phaser.Keyboard.UP))
         {
-          this.body.velocity.y = -25;
+          this.body.velocity.y = -100;
         }
         else
         {

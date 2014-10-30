@@ -8,7 +8,7 @@ module Velcrelephant.State
     {
       this.stage.backgroundColor = 0x000000;
 
-      var player = new Prefab.Player(this.game, 10, 10);
+      var player = new Prefab.Player(this.game, 85, 145);
       this.game.physics.enable(player, Phaser.Physics.ARCADE);
     }
   }

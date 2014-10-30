@@ -26,4 +26,7 @@ module Velcrelephant
 window.onload = () =>
 {
   var game = new Velcrelephant.Game();
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+  game.scale.pageAlignHorizontally = true;
+  game.scale.pageAlignVertically = true;
 }
