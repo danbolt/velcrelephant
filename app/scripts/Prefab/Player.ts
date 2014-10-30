@@ -35,13 +35,10 @@ module Velcrelephant.Prefab
           this.animations.frame = 0;
         }
 
-        if (keyboard.isDown(Phaser.Keyboard.DOWN))
+        if (keyboard.isDown(Phaser.Keyboard.UP))
         {
-          this.body.velocity.y = 100;
-        }
-        else if (keyboard.isDown(Phaser.Keyboard.UP))
-        {
-          this.body.velocity.y = -100;
+          if (this.body.touching.down)
+            this.body.velocity.y = -300;
         }
         else
         {

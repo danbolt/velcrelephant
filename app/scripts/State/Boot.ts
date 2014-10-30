@@ -14,6 +14,9 @@ module Velcrelephant.State
       // Assign global settings here
 
       this.game.state.start('preload');
+      this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+      this.game.scale.pageAlignHorizontally = true;
+      this.game.scale.pageAlignVertically = true;
     }
   }
 }
