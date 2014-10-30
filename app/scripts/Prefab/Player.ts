@@ -19,13 +19,13 @@ module Velcrelephant.Prefab
 
         if (keyboard.isDown(Phaser.Keyboard.RIGHT))
         {
-          this.body.velocity.x = 50;
+          this.body.velocity.x = 100;
           this.scale.x = 1;
           this.animations.play('walk');
         }
         else if (keyboard.isDown(Phaser.Keyboard.LEFT))
         {
-          this.body.velocity.x = -50;
+          this.body.velocity.x = -100;
           this.scale.x = -1;
           this.animations.play('walk');
         }

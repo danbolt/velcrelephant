@@ -9,7 +9,7 @@ module Velcrelephant.State
     create()
     {
       this.stage.backgroundColor = 0xf5f1de;
-      this.game.physics.arcade.gravity.y = 1500;
+      this.game.physics.arcade.gravity.y = 2500;
 
       this.player = new Prefab.Player(this.game, 85, 430);
       this.game.physics.arcade.enableBody(this.player);
