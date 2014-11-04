@@ -11,6 +11,9 @@ module Velcrelephant.State
 
       this.load.image('tos', 'assets/images/tos.jpg');
       this.load.image('player', 'assets/images/test-sheet.png');
+      this.load.image('polkadots-sheet', 'assets/images/polkaDotSheet.png');
+
+      this.load.tilemap('polkadots', 'assets/maps/someTileMapLevel.json', null, Phaser.Tilemap.TILED_JSON);
 
       // Load remaining assets here
     }

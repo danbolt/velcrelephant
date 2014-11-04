@@ -6,6 +6,8 @@ module Velcrelephant.Prefab
     {
       super(game, x, y, 'player', 0);
 
+      this.crop(new Phaser.Rectangle(64, 0, 16, 16));
+
       game.add.existing(this);
     }
 
