@@ -10,6 +10,7 @@ module Velcrelephant.State
       this.load.setPreloadSprite(this.preloadBar);
 
       this.load.spritesheet('player', 'assets/images/elephant.png', 171, 145, 2);
+      this.load.image('enemy', 'assets/images/legenemy.png');
       this.load.image('ground', 'assets/images/wood.png');
 
       this.load.image('polkadots-sheet', 'assets/images/polkaDotSheet.png');
