@@ -37,12 +37,8 @@ module Velcrelephant.Prefab
 
         if (keyboard.isDown(Phaser.Keyboard.UP))
         {
-          if (this.body.touching.down)
+          if (this.body.onFloor())
             this.body.velocity.y = -300;
-        }
-        else
-        {
-          this.body.velocity.y = 0;
         }
       }
     }

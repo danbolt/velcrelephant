@@ -9,9 +9,12 @@ module Velcrelephant.State
       this.preloadBar = this.add.sprite(0, 148, 'preload-bar');
       this.load.setPreloadSprite(this.preloadBar);
 
-      this.load.image('tos', 'assets/images/tos.jpg');
       this.load.spritesheet('player', 'assets/images/elephant.png', 171, 145, 2);
       this.load.image('ground', 'assets/images/wood.png');
+
+      this.load.image('polkadots-sheet', 'assets/images/polkaDotSheet.png');
+
+      this.load.tilemap('polkadots', 'assets/maps/someTileMapLevel.json', null, Phaser.Tilemap.TILED_JSON);
 
       // Load remaining assets here
     }
