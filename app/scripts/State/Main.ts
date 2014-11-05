@@ -16,7 +16,7 @@ module Velcrelephant.State
     create()
     {
       this.stage.backgroundColor = 0xf5f1de;
-      this.game.physics.arcade.gravity.y = 2500;
+      this.game.physics.arcade.gravity.y = 1000;
 
       this.map = this.game.add.tilemap('polkadots');
 
