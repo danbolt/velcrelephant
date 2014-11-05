@@ -35,6 +35,8 @@ module Velcrelephant.State
 
       this.enemy = new Prefab.Enemy(this.game, 285, 0);
       this.game.physics.arcade.enableBody(this.enemy);
+
+      this.game.camera.follow(this.player);
     }
 
     update()

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="75" height="30" tilewidth="16" tileheight="16">
- <tileset firstgid="1" name="polkaDotSheet" tilewidth="16" tileheight="16">
-  <image source="../../app/assets/images/polkaDotSheet.png" width="144" height="48"/>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="75" height="15" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="polkaDotSheet" tilewidth="32" tileheight="32">
+  <image source="../../app/assets/images/polkaDotSheet.png" width="288" height="96"/>
   <terraintypes>
    <terrain name="pink" tile="-1"/>
    <terrain name="green" tile="-1"/>
@@ -25,14 +25,14 @@
   <tile id="22" terrain="1,1,,"/>
   <tile id="23" terrain="1,,,"/>
  </tileset>
- <layer name="background" width="75" height="30">
+ <layer name="background" width="75" height="15">
   <data encoding="base64" compression="zlib">
-   eJzt1TEOgDAIBVC22k1H739R28HRGNNGSXzD2yD8gUCJiALAI7VZEuSAO3YVIId+i2uCHLzv/MX+MQD8wzpgm1w3s3dk5pUdAAA+cgDUtW+x
+   eJzt0aEOACAIhGEa0DT6/i+qwWoCHXN/+Nqxuw0VES3GFi+wA+/5/r8V2AIAAO5rAT05l3kb6TwZAIDvTMNbO9A=
   </data>
  </layer>
- <layer name="foreground" width="75" height="30">
+ <layer name="foreground" width="75" height="15">
   <data encoding="base64" compression="zlib">
-   eJztlssKgzAQRafPhbV20Vr7/1/aCRgMYoJoyaM5B+5GF94cJjIiAAAAAAAAABMHzSl1iQIwnm5j8BWmkckVvsI8NS8n/fjczNtRcLcG67D3vD9rLpprtEblctd0mkfqIhli58imc1LzfC3dr7dmCOQTuWMKQl7++fxb/rc1eDHM3dRy7jXsdWN3phzz6z1uy9y4O+V8R88praTZf5f8tJK/K7drjDvg81Oaqxhdfd/EFa5wld7VFx6gFVU=
+   eJztlssKgCAQRafnooctev7/lzYDSiImUaFTeuFA1GY8jHEBUp4mQ4rQQ3wg5KmVJF/uNHC4Sr7cGZFJY5bvad9ySO6uRDmcT76XSIXU3ib6bnpEIEPoQRhG7ZFCaMS8X7b7tSCrg83zjCHi8vLn89/538bghWK6ieXcV/LUjepMHHm7x93ZG71Tmh2dEx2E6b82Px3wd6XP6uMOnPmh5x0wKghx
   </data>
  </layer>
 </map>

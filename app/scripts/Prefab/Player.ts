@@ -10,8 +10,6 @@ module Velcrelephant.Prefab
       this.anchor.setTo(.5, 1);
       this.animations.add('walk', [0,1], 10, true);
 
-      this.scale.x = 0.18713;
-      this.scale.y = 0.18713;
     }
 
     update()
@@ -23,14 +21,14 @@ module Velcrelephant.Prefab
         if (keyboard.isDown(Phaser.Keyboard.RIGHT))
         {
           this.body.velocity.x = 100;
-          this.scale.x = 0.18713;
           this.animations.play('walk');
+          this.scale.x = 1;
         }
         else if (keyboard.isDown(Phaser.Keyboard.LEFT))
         {
           this.body.velocity.x = -100;
-          this.scale.x = -0.18713;
           this.animations.play('walk');
+          this.scale.x = -1;
         }
         else
         {
@@ -41,7 +39,7 @@ module Velcrelephant.Prefab
         if (keyboard.isDown(Phaser.Keyboard.UP))
         {
           if (this.body.onFloor())
-            this.body.velocity.y = -300;
+            this.body.velocity.y = -600;
         }
       }
     }

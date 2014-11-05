@@ -10,9 +10,6 @@ module Velcrelephant.Prefab
       game.add.existing(this);
       this.direction = 'left';
       this.anchor.setTo(.5, 1);
-
-      this.scale.x = 0.18713;
-      this.scale.y = 0.18713;
       
       this.game.time.events.repeat(Phaser.Timer.SECOND * 5, 0, this.move, this);      
     }
@@ -27,11 +24,14 @@ module Velcrelephant.Prefab
       {
         this.body.velocity.x = -50;
         this.direction = 'right';
+        this.scale.x = 1;
+
       }
       else
       {
         this.body.velocity.x = 50;
         this.direction = 'left';
+        this.scale.x = -1;
       }
       this.game.time.events.repeat(Phaser.Timer.SECOND * 5, 0, this.move, this);
     }
