@@ -10,6 +10,10 @@ module Velcrelephant.Prefab
       game.add.existing(this);
       this.direction = 'left';
       this.anchor.setTo(.5, 1);
+
+      this.scale.x = 0.18713;
+      this.scale.y = 0.18713;
+      
       this.game.time.events.repeat(Phaser.Timer.SECOND * 5, 0, this.move, this);      
     }
 
