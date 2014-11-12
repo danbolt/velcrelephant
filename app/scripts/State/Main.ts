@@ -12,6 +12,7 @@ module Velcrelephant.State
     private map;
     private backgroundLayer;
     private foregroundLayer;
+    private barriers;
 
     create()
     {
@@ -24,16 +25,21 @@ module Velcrelephant.State
 
       this.backgroundLayer = this.map.createLayer('background');
       this.foregroundLayer = this.map.createLayer('foreground');
+      this.barriers = this.map.createLayer('barriers');
 
       this.backgroundLayer.resizeWorld();
       this.foregroundLayer.resizeWorld();
+      this.barriers.resizeWorld();
+
+      this.barriers.visible = false;
 
       this.player = new Prefab.Player(this.game, 85, 0);
       this.game.physics.arcade.enableBody(this.player);
 
       this.map.setCollisionByExclusion([], true, this.foregroundLayer);
+      this.map.setCollisionByExclusion([], true, this.barriers);
 
-      this.enemy = new Prefab.Enemy(this.game, 285, 0);
+      this.enemy = new Prefab.Enemy(this.game, 550, 0);
       this.game.physics.arcade.enableBody(this.enemy);
 
       this.game.camera.follow(this.player);
@@ -43,6 +49,7 @@ module Velcrelephant.State
     {
       this.game.physics.arcade.collide(this.player, this.foregroundLayer);
       this.game.physics.arcade.collide(this.enemy, this.foregroundLayer);
+      this.game.physics.arcade.collide(this.enemy, this.barriers);
       this.game.physics.arcade.collide(this.player, this.enemy);
     }
   }

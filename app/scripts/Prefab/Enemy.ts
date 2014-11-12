@@ -2,38 +2,31 @@ module Velcrelephant.Prefab
 {
   export class Enemy extends Phaser.Sprite
   {
-    private direction: string;
     constructor(game: Phaser.Game, x: number, y: number)
     {
       super(game, x, y, 'enemy', 0);
 
       game.add.existing(this);
-      this.direction = 'left';
       this.anchor.setTo(.5, 1);
       
-      this.game.time.events.repeat(Phaser.Timer.SECOND * 5, 0, this.move, this);      
     }
 
     update()
     {
-    }
-
-    move()
-    {
-      if (this.direction == 'left')
+      this.body.velocity.x = this.body.velocity.x || -50;
+      
+      if (this.body.blocked.left)
       {
-        this.body.velocity.x = -50;
-        this.direction = 'right';
-        this.scale.x = 1;
-
-      }
-      else
-      {
+        this.body.x += 1; 
         this.body.velocity.x = 50;
-        this.direction = 'left';
         this.scale.x = -1;
       }
-      this.game.time.events.repeat(Phaser.Timer.SECOND * 5, 0, this.move, this);
+      else if (this.body.blocked.right)
+      {
+        this.body.x -= 1; 
+        this.body.velocity.x = -50;
+        this.scale.x = 1;
+      }
     }
   }
 }
