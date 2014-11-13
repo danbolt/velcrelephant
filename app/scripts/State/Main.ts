@@ -6,7 +6,7 @@ module Velcrelephant.State
   export class Main extends Phaser.State
   {
     player;
-    enemy;
+    enemies;
     ground;
 
     private map;
@@ -39,8 +39,14 @@ module Velcrelephant.State
       this.map.setCollisionByExclusion([], true, this.foregroundLayer);
       this.map.setCollisionByExclusion([], true, this.barriers);
 
-      this.enemy = new Prefab.Enemy(this.game, 550, 0);
-      this.game.physics.arcade.enableBody(this.enemy);
+      this.enemies = this.game.add.group();
+      var enemyCoords = [[400,96], [550,0], [550,350]];
+      for (var i = 0; i < enemyCoords.length; i++)
+      {
+        var enemy = new Prefab.Enemy(this.game, enemyCoords[i][0], enemyCoords[i][1]);
+        this.enemies.add(enemy);
+        this.game.physics.arcade.enableBody(enemy);
+      }
 
       this.game.camera.follow(this.player);
     }
@@ -48,9 +54,9 @@ module Velcrelephant.State
     update()
     {
       this.game.physics.arcade.collide(this.player, this.foregroundLayer);
-      this.game.physics.arcade.collide(this.enemy, this.foregroundLayer);
-      this.game.physics.arcade.collide(this.enemy, this.barriers);
-      this.game.physics.arcade.collide(this.player, this.enemy, this.bonk);
+      this.game.physics.arcade.collide(this.enemies, this.foregroundLayer);
+      this.game.physics.arcade.collide(this.enemies, this.barriers);
+      this.game.physics.arcade.collide(this.player, this.enemies, this.bonk);
     }
 
     bonk (player, enemy)
