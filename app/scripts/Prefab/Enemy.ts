@@ -14,16 +14,15 @@ module Velcrelephant.Prefab
     update()
     {
       this.body.velocity.x = this.body.velocity.x || -50;
-      
-      if (this.body.blocked.left)
+      if (this.body.blocked.left || this.body.touching.left)
       {
-        this.body.x += 1; 
+        this.body.x += 1; // don't trigger this again
         this.body.velocity.x = 50;
         this.scale.x = -1;
       }
-      else if (this.body.blocked.right)
+      else if (this.body.blocked.right || this.body.touching.right)
       {
-        this.body.x -= 1; 
+        this.body.x -= 1;  // don't trigger this again
         this.body.velocity.x = -50;
         this.scale.x = 1;
       }

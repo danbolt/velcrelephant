@@ -50,7 +50,13 @@ module Velcrelephant.State
       this.game.physics.arcade.collide(this.player, this.foregroundLayer);
       this.game.physics.arcade.collide(this.enemy, this.foregroundLayer);
       this.game.physics.arcade.collide(this.enemy, this.barriers);
-      this.game.physics.arcade.collide(this.player, this.enemy);
+      this.game.physics.arcade.collide(this.player, this.enemy, this.bonk);
+    }
+
+    bonk (player, enemy)
+    {
+      if (player.body.overlapY > 0 && enemy.body.overlapY > 0 && player.body.touching.down)
+        enemy.destroy(); // only kill from overhead
     }
   }
 }
