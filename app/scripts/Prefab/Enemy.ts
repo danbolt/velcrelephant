@@ -8,11 +8,12 @@ module Velcrelephant.Prefab
 
       game.add.existing(this);
       this.anchor.setTo(.5, 1);
-      
+      this.animations.add('walk', [0,1], 10, true);
     }
 
     update()
     {
+      this.animations.play('walk');
       this.body.velocity.x = this.body.velocity.x || -50;
       if (this.body.blocked.left || this.body.touching.left)
       {
