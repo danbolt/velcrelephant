@@ -19,7 +19,7 @@ You might need certain `sudo` privileges to get everything running.
 
 Once you're all installed, simply type the following:
 ```
-grunt
+gulp
 ```
 
-There you go! Your web browser should open and start flinging static files at your face. Grunt should rebuild things as you need.
+And there you go! Your web browser should open and start flinging static files at your face. Gulp should rebuild things as you need.
