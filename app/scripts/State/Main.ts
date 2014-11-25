@@ -40,7 +40,7 @@ module Velcrelephant.State
       this.map.setCollisionByExclusion([], true, this.barriers);
 
       this.enemies = this.game.add.group();
-      var enemyCoords = [[400,96], [550,0], [550,350]];
+      var enemyCoords = [[400,96], [550,0], [550,350], [700,350]];
       for (var i = 0; i < enemyCoords.length; i++)
       {
         var enemy = new Prefab.Enemy(this.game, enemyCoords[i][0], enemyCoords[i][1]);
@@ -49,6 +49,8 @@ module Velcrelephant.State
       }
 
       this.game.camera.follow(this.player);
+
+
     }
 
     update()
@@ -56,13 +58,37 @@ module Velcrelephant.State
       this.game.physics.arcade.collide(this.player, this.foregroundLayer);
       this.game.physics.arcade.collide(this.enemies, this.foregroundLayer);
       this.game.physics.arcade.collide(this.enemies, this.barriers);
-      this.game.physics.arcade.collide(this.player, this.enemies, this.bonk);
+      this.game.physics.arcade.overlap(this.player, this.enemies, this.stick, this.test, this);
+      this.game.physics.arcade.overlap(this.player, this.enemies, this.bonk);
+
+      this.game.debug.spriteInfo(this.player, 10, 10);
     }
 
-    bonk (player, enemy)
+    bonk(player, enemy)
     {
-      if (player.body.overlapY > 0 && enemy.body.overlapY > 0 && player.body.touching.down)
+      if (player.body.overlapY > 0 && player.body.overlapY == enemy.body.overlapY && player.body.touching.down)
+      {
         enemy.destroy(); // only kill from overhead
+        player.body.velocity.y = -600;
+      }/*
+      else if (player.body.overlapX > 0 && player.body.overlapX == enemy.body.overlapX)
+      {
+        this.game.debug.spriteInfo(enemy, 32, 100); 
+        this.stuckObjects.add(enemy);     
+      }*/
+    }
+    stick(player, enemy)
+    {
+      this.game.debug.spriteInfo(enemy, 32, 100);
+      enemy.body.velocity.x = player.body.velocity.x;
+      enemy.body.velocity.y = player.body.velocity.y;
+    }
+    test(player, enemy)
+    {
+      player.position.x + player.width <= enemy.position.x ||
+      player.position.y + player.height <= enemy.position.y ||
+      player.position.x >= enemy.position.x + enemy.width ||
+      player.position.y >= enemy.position.y + enemy.height;
     }
   }
 }

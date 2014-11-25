@@ -20,7 +20,7 @@ module Velcrelephant.Prefab
 
         if (keyboard.isDown(Phaser.Keyboard.RIGHT))
         {
-          this.body.velocity.x = 100;
+          this.body.velocity.x = 200;
           this.animations.play('walk');
           this.scale.x = 1;
         }

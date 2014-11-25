@@ -15,18 +15,19 @@ module Velcrelephant.Prefab
     {
       this.animations.play('walk');
       this.body.velocity.x = this.body.velocity.x || -50;
+
       if (this.body.blocked.left || this.body.touching.left)
       {
-        this.body.x += 1; // don't trigger this again
+        //this.body.x += 1; // don't trigger this again
         this.body.velocity.x = 50;
-        this.scale.x = -1;
       }
       else if (this.body.blocked.right || this.body.touching.right)
       {
-        this.body.x -= 1;  // don't trigger this again
+        //this.body.x -= 1;  // don't trigger this again
         this.body.velocity.x = -50;
-        this.scale.x = 1;
       }
+      if (Math.abs(this.body.velocity.x) > 10) // stop the erstatz movement
+        this.scale.x = this.body.velocity.x < 0 ? 1 : -1;
     }
   }
 }
