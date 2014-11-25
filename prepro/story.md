@@ -33,6 +33,18 @@ Prologue: It's the twins' birthday, and Mom has given Angel Velcrelephant, her n
 
 Act 1: To start her adventure, Velcrelephant seeks the Magic Council, who are somewhere in Angel's room. Once she reaches there, the council is stolen by Joseph, who mocks Angel for playing with rocks. He hides them around the house. Velcrelephant has found the adventure she is looking for: rescue the council.
 
+### Panels
+
+Once upon a time there lived a beautiful princess named Angel.
+
+She lived with her mom, Queen Jane, and twin sister, Becky, in a house on Second Avenue.
+
+On their seventh birthday, Queen Jane gave the twins birthday presents.
+
+Becky got a basketball, while Angel was given a brave knight and loyal friend:
+
+Velcrelephant, the elephant made of Velcro!
+
 Acts 2-5: Rescue a council member in a different room of the house. Ideas:
 
 - Living room? Messy.
