@@ -16,8 +16,10 @@ module Velcrelephant.State
 
     create()
     {
+      this.game.physics.startSystem(Phaser.Physics.P2JS);
+
       this.stage.backgroundColor = 0xf5f1de;
-      this.game.physics.arcade.gravity.y = 1000;
+      this.game.physics.p2.gravity.y = 1000;
 
       this.map = this.game.add.tilemap('polkadots');
 
@@ -34,10 +36,13 @@ module Velcrelephant.State
       this.barriers.visible = false;
 
       this.player = new Prefab.Player(this.game, 85, 0);
-      this.game.physics.arcade.enableBody(this.player);
+      this.game.physics.p2.enable(this.player, false, true);
 
       this.map.setCollisionByExclusion([], true, this.foregroundLayer);
       this.map.setCollisionByExclusion([], true, this.barriers);
+
+      // This is optimized to turn adjacent tiles into bigger compound shapes. Keep note!
+      this.game.physics.p2.convertTilemap(this.map, 'foreground', true, true);
 
       this.enemies = this.game.add.group();
       var enemyCoords = [[400,96], [550,0], [550,350], [700,350]];
@@ -45,7 +50,7 @@ module Velcrelephant.State
       {
         var enemy = new Prefab.Enemy(this.game, enemyCoords[i][0], enemyCoords[i][1]);
         this.enemies.add(enemy);
-        this.game.physics.arcade.enableBody(enemy);
+        this.game.physics.p2.enable(enemy, false, true);
       }
 
       this.game.camera.follow(this.player);
@@ -55,11 +60,13 @@ module Velcrelephant.State
 
     update()
     {
+      /*
       this.game.physics.arcade.collide(this.player, this.foregroundLayer);
       this.game.physics.arcade.collide(this.enemies, this.foregroundLayer);
       this.game.physics.arcade.collide(this.enemies, this.barriers);
       this.game.physics.arcade.overlap(this.player, this.enemies, this.stick, this.test, this);
       this.game.physics.arcade.overlap(this.player, this.enemies, this.bonk);
+      */
 
       this.game.debug.spriteInfo(this.player, 10, 10);
     }
@@ -73,8 +80,8 @@ module Velcrelephant.State
       }/*
       else if (player.body.overlapX > 0 && player.body.overlapX == enemy.body.overlapX)
       {
-        this.game.debug.spriteInfo(enemy, 32, 100); 
-        this.stuckObjects.add(enemy);     
+        this.game.debug.spriteInfo(enemy, 32, 100);
+        this.stuckObjects.add(enemy);
       }*/
     }
     stick(player, enemy)

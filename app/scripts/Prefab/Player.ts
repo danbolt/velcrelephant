@@ -15,31 +15,32 @@ module Velcrelephant.Prefab
     update()
     {
       // keyboard logic
+
       {
         var keyboard:Phaser.Keyboard = this.game.input.keyboard;
 
         if (keyboard.isDown(Phaser.Keyboard.RIGHT))
         {
-          this.body.velocity.x = 200;
+          this.body.moveRight(200);
+
           this.animations.play('walk');
           this.scale.x = 1;
         }
         else if (keyboard.isDown(Phaser.Keyboard.LEFT))
         {
-          this.body.velocity.x = -100;
+          this.body.moveLeft(200);
+
           this.animations.play('walk');
           this.scale.x = -1;
         }
         else
         {
-          this.body.velocity.x = 0;
           this.animations.frame = 0;
         }
 
         if (keyboard.isDown(Phaser.Keyboard.UP))
         {
-          if (this.body.onFloor())
-            this.body.velocity.y = -600;
+          this.body.velocity.y = -200;
         }
       }
     }

@@ -14,8 +14,9 @@ module Velcrelephant.Prefab
     update()
     {
       this.animations.play('walk');
-      this.body.velocity.x = this.body.velocity.x || -50;
+      //this.body.velocity.x = this.body.velocity.x || -50; // <--- this is really clever and I've never seen it before and I like it but I might change it
 
+      /*
       if (this.body.blocked.left || this.body.touching.left)
       {
         //this.body.x += 1; // don't trigger this again
@@ -27,7 +28,7 @@ module Velcrelephant.Prefab
         this.body.velocity.x = -50;
       }
       if (Math.abs(this.body.velocity.x) > 10) // stop the erstatz movement
-        this.scale.x = this.body.velocity.x < 0 ? 1 : -1;
+        this.scale.x = this.body.velocity.x < 0 ? 1 : -1;*/
     }
   }
 }

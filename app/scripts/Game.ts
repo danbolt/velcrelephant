@@ -11,7 +11,7 @@ module Velcrelephant
   {
     constructor()
     {
-      super(640, 480, Phaser.AUTO, 'game-div', null, false, false, Phaser.Physics.ARCADE);
+      super(640, 480, Phaser.AUTO, 'game-div', null, false, false, Phaser.Physics.P2JS);
 
       this.state.add('boot', State.Boot);
       this.state.add('preload', State.Preload);
